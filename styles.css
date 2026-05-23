@@ -1,0 +1,154 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --white:      #ffffff;
+  --black:      #000000;
+  --blue:       #4da6ff;     
+  --blue-dark:  #1e5bd6;
+  --blue-light: #1a1a1a;
+
+  --gray-100:   #111111;
+  --gray-200:   #1a1a1a;
+  --gray-400:   #777777;
+  --gray-600:   #aaaaaa;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+nav {
+  background-color: var(--black);
+  border-bottom: 2px solid var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--gray-600);
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--blue);
+}
+
+
+footer {
+  background-color: var(--black);
+  border-top: 3px solid var(--blue);
+  color: var(--gray-400);
+  padding: 28px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.footer-logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+
+
+.placeholder-image {
+  background-color: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-400);
+}
+
+.placeholder-image svg {
+  width: 56px;
+  height: 42px;
+}
+
+
+.text-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.text-line {
+  display: block;
+  height: 10px;
+  background-color: var(--gray-200);
+  border-radius: 2px;
+  width: 100%;
+}
+
+.text-line.short {
+  width: 60%;
+}
+
+/
+.btn-back {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--blue);
+  text-decoration: none;
+  margin-top: 16px;
+}
+
+.btn-back:hover {
+  color: var(--blue-dark);
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 16px 24px;
+    gap: 12px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 24px;
+  }
+}
